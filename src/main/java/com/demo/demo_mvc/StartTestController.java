@@ -9,18 +9,18 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class StartTestController {
 
-	@RequestMapping(value="/StartTestController/startTest.do", method = RequestMethod.GET)
+	@RequestMapping(value="/StartTestController/startTest", method = RequestMethod.GET)
 	public String startTest(HttpServletRequest request) {
 		System.out.println("Start test!");
 		return "/login"; 
 	}
 	
-	@RequestMapping(value="/welcome.do", method = RequestMethod.GET)
+	@RequestMapping(value="/welcome", method = RequestMethod.GET)
 	public String welcome() {
 		return "/welcome"; 
 	}
 
-	@RequestMapping(value="/login.do", method = RequestMethod.GET)
+	@RequestMapping(value="/login", method = RequestMethod.GET)
 	public String login(HttpServletRequest request) {
 		String u = request.getParameter("u");
 		String p = request.getParameter("p");
@@ -29,7 +29,7 @@ public class StartTestController {
 		else return "/error"; 
 	}
 	
-	@RequestMapping(value="/anyone.do", method = RequestMethod.GET)
+	@RequestMapping(value="/anyone", method = RequestMethod.GET)
 	public String anyone() {
 		System.out.println("Anyone");
 		return "/anyone"; 

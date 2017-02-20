@@ -1,4 +1,4 @@
-package com.demo.demo_mvc;
+package com.demo.demo_mvc.interceptor;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
