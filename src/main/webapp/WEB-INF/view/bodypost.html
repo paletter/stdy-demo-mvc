@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="./angular.min.js"></script>
+<script type="text/javascript" src="./jquery.min.js"></script>
+<script type="text/javascript" >
+function BodyCtrl($scope, $element, $http) {
+	
+	$scope.searchOrder = function() {
+		var param = {userId: "1"};
+		$http.post("/demo-mvc/user/searchUser.json", param).success(function(data) { 
+			console.log(data);
+		});
+	};
+	
+	$scope.searchOrder();
+}
+</script>
+</head>
+<body ng-controller="BodyCtrl">
+BodyPost!
+</body>
+</html>

@@ -23,6 +23,7 @@
   		<mvc:interceptor>
   			<mvc:mapping path="/**"/>
   			<mvc:exclude-mapping path="/anyone*"/>
+  			<mvc:exclude-mapping path="/anyone/*"/>
   			<bean class="com.demo.demo_mvc.interceptor.MyInterceptor"></bean>
   		</mvc:interceptor>
   	</mvc:interceptors>
@@ -55,14 +56,14 @@
 		<property name="mediaTypes">
            <map>
               <entry key="json" value="application/json" />
-              <entry key="xml" value="application/xml"/>                     
+              <entry key="xml" value="application/xml"/>
           </map>
 		</property>
 		
 		<property name="defaultViews">
 			<list>
 				<!-- json view -->
-				<bean class="org.springframework.web.servlet.view.json.MappingJacksonJsonView"></bean>
+				<bean class="org.springframework.web.servlet.view.json.MappingJackson2JsonView"></bean>
 				<!-- xml view -->
 				<bean class="org.springframework.web.servlet.view.xml.MarshallingView">
                     <constructor-arg>
