@@ -25,7 +25,7 @@ public class StartTestController {
 		String u = request.getParameter("u");
 		String p = request.getParameter("p");
 		
-		if(u.equals("1") && p.equals("2")) return "/success";// 2
+		if(u.equals("1") && p.equals("2")) return "/success";
 		else return "/error"; 
 	}
 	
