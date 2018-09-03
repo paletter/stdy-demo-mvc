@@ -1,21 +1,26 @@
 package com.demo.demo_mvc;
 
-import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Vector;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.demo.demo_mvc.dto.ResultVo;
+import com.demo.demo_mvc.service.UserService;
 
 @Controller
 public class StartTestController {
 
+	@Autowired
+	private UserService userService;
+	
+	@Autowired
+	private UserService userService2;
+	
 	@RequestMapping(value="/StartTestController/startTest", method = RequestMethod.GET)
 	public String startTest(HttpServletRequest request) {
 		System.out.println("Start test!");
@@ -64,4 +69,15 @@ public class StartTestController {
 	public String respstr2() {
 		return "ResponString(中文)";
 	}
+	
+	@RequestMapping(value="/get/username")
+	public String getUserName() {
+		return userService.getUserName();
+	}
+
+	public void setUserService(UserService userService) {
+		this.userService = userService;
+	}
+	
+	
 }
