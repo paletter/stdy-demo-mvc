@@ -14,6 +14,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 
+import com.demo.demo_mvc.controller.StartTestController;
 import com.demo.demo_mvc.service.UserService;
 import com.demo.demo_mvc.service.UserServiceImpl;
 

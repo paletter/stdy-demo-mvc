@@ -1,4 +1,4 @@
-package com.demo.demo_mvc;
+package com.demo.demo_mvc.controller;
 
 import java.util.HashMap;
 import java.util.Map;
